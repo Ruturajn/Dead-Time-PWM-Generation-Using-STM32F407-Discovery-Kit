@@ -70,7 +70,7 @@ void TIM1_Init(){
 	// Setting the Duty Cycle (50% = 25us)
 	TIM1->CCR1 |= 50;
 
-	// Setting the Dead-Time to 1us, with a clock frequency of 16MHz
+	// Setting the Dead-Time to 5us, with a clock frequency of 16MHz
 	// DTG[7:0] = 80 => 80*(1/16MHz) = 80*62.5ns = 5us
 	TIM1->BDTR |= (80UL<<0);
 }
